@@ -5,7 +5,7 @@ import { Card, Provider as PaperProvider, Appbar } from 'react-native-paper';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 const products = [
-  { id: '1', name: 'Sản phẩm 1', shopName: 'Shop 1', imgPath: 'https://ggmeo.com/images/linh-thu-dtcl/gwen-tiem-tra-ngot-ngao-ti-ni.jpg' },
+  { id: '1', name: 'Sản phẩm 1', shopName: 'Shop 1', imgPath: 'assets\\canaulau.jpg' },
   { id: '2', name: 'Sản phẩm 2', shopName: 'Shop 2', imgPath: 'https://ggmeo.com/images/linh-thu-dtcl/sona-co-cam-ti-ni.jpg' },
   { id: '3', name: 'Sản phẩm 3', shopName: 'Shop 3', imgPath: 'https://scontent.fsgn5-6.fna.fbcdn.net/v/t39.30808-6/415753818_877058177538573_9027738771034412362_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=6uL__NNgQowQ7kNvgG3JTU7&_nc_ht=scontent.fsgn5-6.fna&_nc_gid=AibGz9FAmJwVN38cPNCB2Rl&oh=00_AYAW_QIy885zmrOPSOqQu9IrNU0cWOqjJkts0xOxk_AMmQ&oe=670052F7' },
   { id: '4', name: 'Sản phẩm 4', shopName: 'Shop 4', imgPath: 'https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/458312680_1029483115629411_7512918684098277239_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=3vUAzHLiR5YQ7kNvgHkWNyB&_nc_ht=scontent.fsgn5-14.fna&oh=00_AYCNjwwGryubFTnFOtCDVOuuYr2Zg7prv3qUvlKux3W6AQ&oe=67005AB8' },
