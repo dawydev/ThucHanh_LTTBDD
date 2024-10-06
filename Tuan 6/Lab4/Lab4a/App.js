@@ -5,15 +5,13 @@ import { Card, Provider as PaperProvider, Appbar } from 'react-native-paper';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 const products = [
-  { id: '1', name: 'Sản phẩm 1', shopName: 'Shop 1', imgPath: 'assets\\canaulau.jpg' },
-  { id: '2', name: 'Sản phẩm 2', shopName: 'Shop 2', imgPath: 'https://ggmeo.com/images/linh-thu-dtcl/sona-co-cam-ti-ni.jpg' },
-  { id: '3', name: 'Sản phẩm 3', shopName: 'Shop 3', imgPath: 'https://scontent.fsgn5-6.fna.fbcdn.net/v/t39.30808-6/415753818_877058177538573_9027738771034412362_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=6uL__NNgQowQ7kNvgG3JTU7&_nc_ht=scontent.fsgn5-6.fna&_nc_gid=AibGz9FAmJwVN38cPNCB2Rl&oh=00_AYAW_QIy885zmrOPSOqQu9IrNU0cWOqjJkts0xOxk_AMmQ&oe=670052F7' },
-  { id: '4', name: 'Sản phẩm 4', shopName: 'Shop 4', imgPath: 'https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/458312680_1029483115629411_7512918684098277239_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=3vUAzHLiR5YQ7kNvgHkWNyB&_nc_ht=scontent.fsgn5-14.fna&oh=00_AYCNjwwGryubFTnFOtCDVOuuYr2Zg7prv3qUvlKux3W6AQ&oe=67005AB8' },
-  { id: '5', name: 'Sản phẩm 5', shopName: 'Shop 5', imgPath: 'https://ggmeo.com/images/linh-thu-dtcl/yasuo-long-kiem-ti-ni.jpg' },
-  { id: '6', name: 'Sản phẩm 6', shopName: 'Shop 6', imgPath: 'https://ggmeo.com/images/linh-thu-dtcl/yone-ta-anh-song-kiem-ti-ni.jpg' },
-  { id: '7', name: 'Sản phẩm 7', shopName: 'Shop 7', imgPath: 'https://ggmeo.com/images/linh-thu-dtcl/annie-gau-truc-ti-ni.jpg' },
-  { id: '8', name: 'Sản phẩm 8', shopName: 'Shop 8', imgPath: 'https://ggmeo.com/images/linh-thu-dtcl/lux-ve-binh-tinh-tu-ti-ni.jpg' },
-  { id: '9', name: 'Sản phẩm 9', shopName: 'Shop 9', imgPath: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDZYMx8oUTloMvFAduZbTuTkHgh5wu3FQwYvF3cCuFEuDxdFfVGLzGmZKoo-h-mEJT6E_5id8jHGLEJhBIhn2bKQuM0wpsq7yn09X5k_DNqZ9xMrxIzNm_JcnyKmKddHMyJ5slqNbkKAByArrgfNImnGrrQyws9e5fAdXbPkJz4nAXbs0HO89_uU8a0h6J/s16000/missfortune-tho-chi-huy-ti-ni.jpg' }, 
+  { id: '1', name: 'Ca nấu lẩu nấu mì mini...', shopName: 'DeVang', imgPath: require('./assets/canaulau.png') },
+  { id: '2', name: 'Sản phẩm 2', shopName: 'LTD Food', imgPath: require('./assets/khogabotoi.png') },
+  { id: '3', name: 'Sản phẩm 3', shopName: 'Thế giới đồ chơi', imgPath: require('./assets/xecancau.png') },
+  { id: '4', name: 'Sản phẩm 4', shopName: 'Thế giới đồ chơi', imgPath: require('./assets/dochoimohinh.png') },
+  { id: '5', name: 'Sản phẩm 5', shopName: 'Minh Long Book', imgPath: require('./assets/sachlanhdao.png') },
+  { id: '6', name: 'Sản phẩm 6', shopName: 'Minh Long Book', imgPath: require('./assets/hieulongcontr.png') },
+  { id: '7', name: 'Sản phẩm 7', shopName: 'Minh Long Book', imgPath: require('./assets/trump.png') },
 ];
 
 export default function App() {
@@ -40,14 +38,12 @@ export default function App() {
   return (
     <PaperProvider>
       <SafeAreaView style={styles.container}>
-        {/* Thanh điều hướng trên cùng */}
         <Appbar.Header style={styles.appbar}>
           <Appbar.BackAction onPress={handleBackPress} color="white" />
           <Appbar.Content title="Chat" titleStyle={styles.appbarTitle} />
           <Appbar.Action icon="cart" onPress={handleCartPress} color="white" />
         </Appbar.Header>
 
-        {/* Nội dung chính */}
         <View style={styles.mainContent}>
           <Text style={styles.text}>
             Bạn có thắc mắc về sản phẩm vừa xem? Đừng ngại chat với shop
@@ -58,7 +54,7 @@ export default function App() {
                 <Card.Content>
                   <View style={styles.imageContainer}>
                     {product.imgPath && (
-                      <Image source={{ uri: product.imgPath }} style={styles.image} />
+                      <Image source={product.imgPath} style={styles.image} />
                     )}
                     <View style={styles.shopandproductName}>
                       <Text style={styles.productName}>{product.name}</Text>
